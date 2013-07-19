@@ -30,10 +30,10 @@ public class SignHeal extends EssentialsSign
 		}
 		final Trade charge = getTrade(sign, 1, ess);
 		charge.isAffordableFor(player);
-		player.setHealth(20);
+		player.setHealth(20.0);
 		player.setFoodLevel(20);
 		player.setFireTicks(0);
-		player.sendMessage(_("youAreHealed"));
+		player.sendMessage(_("YouAreHealed"));
 		charge.charge(player);
 		Trade.log("Sign", "Heal", "Interact", username, null, username, charge, sign.getBlock().getLocation(), ess);
 		return true;
